@@ -51,7 +51,7 @@ const secret = process.env.SECRET || 'thisshouldbeabettersecret';
 const store = new MongoDBStore({
     url: dbUrl,
     secret,
-    touchAfter: 24 * 60 *60
+    touchAfter: 24 * 60 * 60
 });
 
 store.on('error', function(e){
@@ -84,7 +84,7 @@ const scriptSrcUrls = [
 ];
 const styleSrcUrls = [
     "https://kit-free.fontawesome.com/",
-    "https://stackpath.bootstrapcdn.com/",,
+    "https://stackpath.bootstrapcdn.com/",
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
     "https://cdn.jsdelivr.net",
@@ -117,6 +117,7 @@ app.use(helmet.contentSecurityPolicy({
     },
 }));
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -126,7 +127,7 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
     console.log(req.query);
-    res.locals.currentUser = req.user;
+    res.locals.currentUser = req.user || null;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error')
     next();
