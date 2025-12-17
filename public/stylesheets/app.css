@@ -11,18 +11,18 @@ body {
 }
 
 h1 {
-    color: rgba(255, 255, 255, 0.704);
+    color: rgba(255, 255, 255, 0.704); 
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    color: rgba(255, 255, 255, 0.704);
-    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.704) !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5) !important;
 }
 
 label {
-    color: rgba(255, 255, 255, 0.704);
-    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.704) !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5) !important;
 }
 
 #cluster-map {
