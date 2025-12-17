@@ -1,9 +1,13 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
+
 const mongoose = require('mongoose');
 const Campground = require('../models/campground');
 const cities = require('./cities');
 const { places, descriptors } = require('./seedHelpers');
 
-mongoose.connect('mongodb://localhost:27017/yelp-camp-maptiler');
+mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
