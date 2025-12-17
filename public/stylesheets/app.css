@@ -10,7 +10,17 @@ body {
     box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
-h1, h2, label {
+h1 {
+    color: rgba(255, 255, 255, 0.704);
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.704);
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+label {
     color: rgba(255, 255, 255, 0.704);
     text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 }
@@ -26,7 +36,7 @@ h1, h2, label {
 }
 
 .campground-card-style {
-    background-image: linear-gradient(rgba(238,238,238, 0.5), rgba(238,238,238, 0.5)),
+    background-image: linear-gradient(rgba(238, 238, 238, 0.5), rgba(238, 238, 238, 0.5)),
         url('https://plus.unsplash.com/premium_photo-1668671067639-aea7644fc044?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlZW4lMjBhbmQlMjB3aGl0ZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
     background-position: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
